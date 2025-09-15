@@ -1,4 +1,12 @@
+body {
+    height: 100%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
 .header{
+    width: 100%;
     height: 100px;
     box-shadow: 0px 10px 10px rgb(198, 198, 198);
     display: flex;
@@ -16,16 +24,40 @@
     color: rgb(6, 75, 6);
 }
 
+.title{
+    font-size: 100px;
+    font-family: poppins;
+}
+
+.highlight{
+    background: linear-gradient(to top, #fcd5ce 40%, transparent 40%);
+}
+
+.text1{
+    padding-bottom: 5px;
+}
+
+.text2{
+    padding-bottom: 5px;
+}
+
+.text3{
+    padding-bottom: 5px;
+}
+
 .text1:hover{
     border-bottom: 5px solid burlywood;
+    padding-bottom: 0px;
 }
 
 .text2:hover{
     border-bottom: 5px solid burlywood;
+    padding-bottom: 0px;
 }
 
 .text3:hover{
     border-bottom: 5px solid burlywood;
+    padding-bottom: 0px;
 }
 
 .logo{
@@ -40,6 +72,14 @@
     font-size: 20px;
     background-color: rgb(5, 54, 5);
     color: white;
+}
+
+.menu{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    position:absolute;
+    opacity: 0;
 }
 
 .part1{
@@ -206,12 +246,29 @@
     left: 1200px;
 }
 
+.footer{
+    margin-top: auto;       
+    display: flex;
+    justify-content: space-between;    
+    padding-top: 50px;
+}
+
+.redes{
+    margin: 0px 120px 50px 120px;
+    height: 40px;
+}
+
+.redes2{
+    margin: 0px 120px 50px 120px;
+    width: 165px;
+}
 
 @media (max-width: 768px) {
     .header {
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
         padding: 10px;
+        justify-content: space-between;
     }
 
     .options {
@@ -220,44 +277,84 @@
         align-items: center;
         font-size: 18px;
         margin-top: 10px;
+        position:absolute;
+        opacity: 0;
     }
 
     .browse {
         margin: 15px 0;
         width: 150px;
         font-size: 18px;
+        position:absolute;
+        opacity: 0;
     }
 
+    .menu{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    opacity: 1;
+    position: static;
+}
+
+.part1{
+    align-items: start;
+}
+
+    .button{
+        margin-left: 30px;
+        width: 200px;
+        height: 70px;
+    }
+
+
+.part2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
     .title {
-        font-size: 40px;
+        text-align: start;
         margin: 30px 0 0 0;
+        margin-left: 30px;
     }
 
     .description {
         width: 90%;
-        font-size: 18px;
+        text-align: start;
+        margin-left: 30px;
     }
 
     .image {
-        width: 100%;
+        width: 83%;
         height: auto;
         margin-top: 30px;
+        margin-left:30px
+    }
+
+    .title2 {
+        text-align: start;
+        margin-left: 30px;
     }
 
     .subtitles {
         flex-direction: column;
-        align-items: center;
+    }
+
+    .icon1, .icon2, .icon3 {
+        margin-left: 30px;
     }
 
     .subtitle1, .subtitle2, .subtitle3 {
-        font-size: 24px;
-        text-align: center;
+        text-align: start;
+        margin-left: 30px;
     }
 
     .text4 {
         width: 90%;
         margin-right: 0;
-        text-align: center;
+        text-align: start;
+        margin-left: 30px;
     }
 
     .part3 {
@@ -268,17 +365,19 @@
     .text-section {
         width: 90%;
         margin: 0 0 30px 0;
+        text-align: start;
     }
 
     .image2 {
-        width: 100%;
+        width: 83%;
         height: auto;
     }
 
     .overlay {
-        width: 95%;
+        width: 80%;
         height: auto;
         padding: 20px;
+        border-radius: 10px;
     }
 
     .title4 {
@@ -290,27 +389,96 @@
         font-size: 18px;
         text-align: center;
     }
+
+        .footer{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .redes{
+        margin: 0%;
+    }
+
+    .redes2{
+        margin: 0%;
+    }
 }
 
 @media (max-width: 480px) {
-    .title {
-        font-size: 28px;
+    .button2, .browse {
+        width: 50%;
+    }
+
+    .icon4, .icon5{
+        position:absolute;
+        opacity: 0;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .redes{
+        margin: 0%;
+    }
+
+    .redes2{
+        margin: 0%;
+    }
+}
+
+@media (max-width: 1024px)and (min-width: 769px) {
+    .image{
+        margin: 0;
     }
 
     .description {
-        font-size: 16px;
+        font-size: 25px;
     }
 
-    .button, .button2, .browse {
-        width: 100%;
-        font-size: 16px;
+    .subtitles{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .subtitle1, .subtitle2, .subtitle3 {
+        font-size: 30px;
+        flex: 1 1 250px;   
+        max-width: 300px; 
+        padding: 20px;
     }
 
-    .title2, .title3, .title4 {
-        font-size: 24px;
+    .text4 {
+        font-size: 25px;
     }
 
-    .text4, .text5, .text6 {
-        font-size: 16px;
+    .text-section{
+        margin-left: 20px;
+    }
+
+    .title3 {
+        font-size: 40px;
+    }
+
+    .text5 {
+        font-size: 25px;
+    }
+
+    .overlay{
+        border-radius: 10px;
+    }
+
+    .title4 {
+        font-size: 40px;
+    }
+
+    .text6 {
+        font-size: 25px;
+    }
+
+    .button2{
+        font-size: 25px;
     }
 }
